@@ -1,0 +1,180 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arimo", sans-serif;
+}
+
+h1 {
+  size: 50px;
+}
+
+img {
+  /* object-fit: cover; */
+  width: 100%;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: no-wrap;
+}
+
+main {
+  background: #663366;
+  width: 50%;
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.main-header {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  object-fit: cover;
+  height: auto;
+}
+.main_footer_image {
+  /* background: black; */
+  width: 60%;
+}
+
+.main-citylist {
+  display: flex;
+}
+
+.main-citylist ul {
+  list-style: none;
+}
+.main-citylist ul > li {
+  margin-top: 14px;
+}
+
+aside {
+  width: 50%;
+  background-image: linear-gradient(-180deg, #a80600 0%, #ff912a 100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+}
+
+.aside_img {
+  width: 40%;
+}
+
+form {
+  color: white;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  /* background: blue; */
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input,
+select,
+button {
+  border: none;
+  width: 240px;
+  height: 45px;
+  font-size: 16px;
+  border-radius: 0.3em;
+}
+.button {
+  background: white;
+}
+input {
+  margin-top: 0;
+  padding-top: 0;
+}
+legend {
+  margin: 0;
+  padding: 0;
+}
+.aside_header {
+  font-size: 1.4rem;
+}
+
+fieldset {
+  /* background-color: #ccc; */
+  max-width: 500px;
+  margin-top: 8px;
+  padding-top: 8px;
+  /* padding: 0;
+  margin: 0; */
+  border: none;
+}
+.modal {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 2rem;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  main,
+  aside {
+    /* justify-content: space-around; */
+    width: 100%;
+    height: 100%;
+    /* height: 100vh; */
+  }
+  .modal {
+    font-size: 1rem;
+    height: 100%;
+    margin-top: 100vh;
+  }
+  aside {
+    font-size: 1rem;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 900px) {
+  main {
+    font-size: 0.8rem;
+  }
+  aside {
+    font-size: 0.8rem;
+  }
+}
+@keyframes animatetop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

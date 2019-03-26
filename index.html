@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Треклокросс серия 2019</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="modal" id="myModal">
+      <span class="close"></span>
+      <div class="modal_image">
+        <img src="img/reg.svg" alt="шлем" />
+      </div>
+      <h3>Спасибо за регистрацию, увидимся на гонке.</h3>
+    </div>
+    <div class="container">
+      <main class="main">
+        <div class="main-header">
+          <img src="img/title.svg" alt="Треклокросс серия 2019" />
+        </div>
+        <div class="main-citylist">
+          <div class="main-citylist__right">
+            <ul>
+              <li>Москва 27.04</li>
+              <li>Краснодар 11.05</li>
+              <li>Челябинск 25.05</li>
+              <li>Обнинск 08.06</li>
+              <li>Новосибирск 15.06</li>
+              <li>Тула 22.06</li>
+              <li>Мытищи 06.07</li>
+              <li>Пермь 06.07</li>
+            </ul>
+          </div>
+          <div class="main-citylist__left">
+            <ul>
+              <li>САКНК-ПЕТЕРБУРГ 20.07</li>
+              <li>ЕКАТЕРИНБУРГ 27.07</li>
+              <li>ТЮМЕНЬ 03.08</li>
+              <li>ОМСК 17.08</li>
+              <li>КАЗАНЬ 31.08</li>
+              <li>СИМФЕРОПОЛЬ 07.09</li>
+              <li>МОСКВА 14.09</li>
+            </ul>
+          </div>
+        </div>
+        <div class="main_footer_image">
+          <img src="img/footer.svg" alt="" />
+        </div>
+      </main>
+      <aside class="aside">
+        <img class="aside_img" src="img/backlayer.svg" alt="" />
+        <div class="aside_googleform">
+          <form
+            action="https://docs.google.com/forms/d/e/1FAIpQLSe_avvm2RVeImW2npIZDefaD4isVDEwU7R7Sfm0--5abJLGiA/formResponse"
+            target="_self"
+            id="bootstrapForm"
+            method="POST"
+          >
+            <fieldset>
+              <legend class="aside_header">Регистрация на серию</legend>
+            </fieldset>
+            <!-- Field type: "short" id: "360421792" -->
+            <fieldset>
+              <legend for="360421792">Фио или никнейм</legend>
+              <div class="form-group">
+                <input
+                  id="559352220"
+                  type="text"
+                  name="entry.559352220"
+                  class="form-control"
+                />
+              </div>
+            </fieldset>
+
+            <!-- Field type: "dropdown" id: "1275419724" -->
+            <fieldset>
+              <legend for="1275419724">
+                Ближайший к вам город
+              </legend>
+              <select
+                id="1275419724"
+                name="entry.877086558"
+                class="form-control"
+              >
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Тула">Тула</option>
+                <option value="Омск">Омск</option>
+                <option value="Пермь">Пермь</option>
+                <option value="Мытиши">Мытиши</option>
+                <option value="Краснодар">Краснодар</option>
+                <option value="Новосибирск">Новосибирск</option>
+                <option value="Челябнск">Челябнск</option>
+                <option value="Обнинск">Обнинск</option>
+                <option value="Екатеринбург">Екатеринбург</option>
+                <option value="Тюмень">Тюмень</option>
+                <option value="Казань">Казань</option>
+                <option value="Симферополь">Симферополь</option>
+              </select>
+            </fieldset>
+
+            <input type="hidden" name="fvv" value="1" />
+            <input type="hidden" name="fbzx" value="1736418665922397724" />
+            <!--
+                  CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+                  This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+                  Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+                  We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+              -->
+            <input type="hidden" name="pageHistory" value="0" />
+            <fieldset>
+              <input class="button" type="submit" value="Зарегестритроватся" />
+            </fieldset>
+          </form>
+        </div>
+      </aside>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+      integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA="
+      crossorigin="anonymous"
+    ></script>
+    <script src="form.js"></script>
+  </body>
+</html>
