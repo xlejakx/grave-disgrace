@@ -13,6 +13,7 @@ $('#bootstrapForm').submit(function (event) {
             // alert('Form Submitted. Thanks.')
             // You can also redirect the user to a custom thank-you page:
             modal.style.display = "flex"
+            setTimeout(closeModal, 3000);
         }
     })
 })
@@ -20,14 +21,19 @@ $('#bootstrapForm').submit(function (event) {
 var modal = document.getElementById('myModal');
 var span = document.getElementsByClassName('close')[0];
 
-span.onclick = function() {
+function closeModal() {
     modal.style.display = "none";
+    document.getElementById("559352220").value = "";
+    document.getElementById("1275419724").value = "Москва";
 }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        document.getElementById("559352220").value = "";
-        document.getElementById("1275419724").value = "Москва";
-    }
-}
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// We listen to the resize event
+window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
