@@ -11,8 +11,11 @@ h1 {
 }
 
 img {
-  /* object-fit: cover; */
   width: 100%;
+}
+
+.bold {
+  font-weight: 700;
 }
 .container {
   width: 100vw;
