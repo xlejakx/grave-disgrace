@@ -1,4 +1,4 @@
-# TRC2019
+# Grave disgrac
 
-Сайт треклокросс серии 2019
-Vue.js + firebase
+Gravel race landing page
+Vue.js
