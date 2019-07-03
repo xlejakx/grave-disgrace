@@ -1,0 +1,267 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arimo", sans-serif;
+}
+
+h1 {
+  size: 50px;
+}
+
+img {
+  /* object-fit: cover; */
+  width: 100%;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  background: #10062b; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #10062b 41%,
+    #3a6eb2 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #10062b 41%,
+    #3a6eb2 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #10062b 41%,
+    #3a6eb2 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+main {
+  /* background: #663366; */
+  width: 500px;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin: 20px 10px;
+}
+
+.font-logo {
+  /* color: red; */
+  font-size: 5em;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  transform-origin: 0px;
+  text-transform: uppercase;
+  transform: rotate(90deg);
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: red;
+}
+
+.reg-wrapper {
+  display: block;
+}
+
+.payment {
+  display: block;
+  width: 600px;
+  height: 100%;
+}
+
+#paymodal {
+  display: none;
+}
+#closebtn {
+  position: absolute;
+  top: 30px;
+  right: calc(49% - 250px);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+
+#closebtn:hover {
+  background: white;
+  color: red;
+}
+.sun {
+  display: block;
+  top: 80px;
+  left: calc(50% - 75px);
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: red;
+  z-index: 0;
+}
+.main-header {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  object-fit: cover;
+  height: auto;
+}
+.main_footer_image {
+  /* background: black; */
+  width: 60%;
+}
+
+.main-citylist {
+  display: flex;
+}
+
+.main-citylist ul {
+  list-style: none;
+}
+.main-citylist ul > li {
+  margin-top: 14px;
+}
+
+aside {
+  width: 50%;
+  background-image: linear-gradient(-180deg, #a80600 0%, #ff912a 100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+}
+
+.aside_img {
+  width: 40%;
+}
+
+form {
+  color: white;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99;
+}
+input {
+  /* background: blue; */
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input,
+select,
+button {
+  border: none;
+  width: 240px;
+  height: 45px;
+  font-size: 16px;
+  border-radius: 0.3em;
+}
+.button {
+  background: white;
+}
+input {
+  margin-top: 0;
+  padding-top: 0;
+}
+legend {
+  margin: 0;
+  padding: 0;
+}
+.aside_header {
+  font-size: 1.4rem;
+}
+
+fieldset {
+  /* background-color: #ccc; */
+  max-width: 500px;
+  margin-top: 8px;
+  padding-top: 8px;
+  /* padding: 0;
+  margin: 0; */
+  border: none;
+}
+.modal {
+  /* display: none; */
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 1rem;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+.modal_text {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background: #ff912a;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  main,
+  aside {
+    /* justify-content: space-around; */
+    width: 100%;
+    height: 100%;
+    /* height: 100vh; */
+  }
+  .modal {
+    font-size: 0.8rem;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+    margin-top: 100vh;
+    width: 100%;
+  }
+  aside {
+    font-size: 1rem;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 900px) {
+  main {
+    font-size: 0.8rem;
+  }
+  aside {
+    font-size: 0.8rem;
+  }
+}
+@keyframes animatetop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
